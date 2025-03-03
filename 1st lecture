@@ -1,0 +1,18 @@
+// function with retrun type and no parameter
+// write a program to create a class with name my app with function name welcome. This function on execution willl display a message on screen welcome to miet jammu
+#include <iostream>
+using namespace std;
+class vinayak
+{
+public:
+    void welcome()
+    {
+        cout << "Welcome to MIET Jammu";
+    }
+};
+int main()
+{
+    vinayak tear;
+    tear.welcome();
+    return 0;
+}
