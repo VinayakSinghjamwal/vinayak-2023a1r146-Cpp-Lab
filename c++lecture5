@@ -1,0 +1,24 @@
+#include <iostream>
+    using namespace std;
+class Area
+{
+private:
+    float radius;
+
+public:
+    Area()
+    {
+        radius = 10;
+    }
+    void calculate()
+    {
+        double area = 3.14 * radius * radius;
+        cout << " area of the circle with radius " << radius << " is: " << area << endl;
+    }
+};
+int main()
+{
+    Area circle;
+    circle.calculate();
+    return 0;
+}
