@@ -1,0 +1,87 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+public:
+    string name;
+    string regno;
+    float marks[5];  // Assuming there are 5 subjects
+    float percentage;
+
+    // Function to input student details
+    void inputDetails() {
+        cout << "Enter student name: ";
+        cin >> name;
+        cout << "Enter registration number: ";
+        cin >> regno;
+
+        float totalMarks = 0;
+        for (int i = 0; i < 5; i++) {
+            cout << "Enter marks for subject " << i + 1 << ": ";
+            cin >> marks[i];
+            totalMarks += marks[i];
+        }
+
+        percentage = (totalMarks / 500) * 100;  // Assuming total marks = 500
+    }
+
+    // Function to display student details
+    void displayDetails() const {
+        cout << "Name: " << name << endl;
+        cout << "Registration No: " << regno << endl;
+        cout << "Marks: ";
+        for (int i = 0; i < 5; i++) {
+            cout << marks[i] << " ";
+        }
+        cout << endl;
+        cout << "Percentage: " << percentage << "%" << endl;
+    }
+};
+
+// Function to display all records
+void displayAllRecords(Student students[], int size) {
+    cout << "\nDisplaying all student records:\n";
+    for (int i = 0; i < size; i++) {
+        cout << "\nStudent " << i + 1 << " Details:" << endl;
+        students[i].displayDetails();
+    }
+}
+
+// Function to search student by registration number
+void searchByRegNo(Student students[], int size, const string& regno) {
+    bool found = false;
+    for (int i = 0; i < size; i++) {
+        if (students[i].regno == regno) {
+            cout << "\nStudent found:\n";
+            students[i].displayDetails();
+            found = true;
+            break;
+        }
+    }
+    if (!found) {
+        cout << "\nStudent with registration number " << regno << " not found.\n";
+    }
+}
+
+int main() {
+    const int size = 5;
+    Student students[size];
+
+    // Input student details
+    for (int i = 0; i < size; i++) {
+        cout << "\nEnter details for student " << i + 1 << ":\n";
+        students[i].inputDetails();
+    }
+
+    // Display all student records
+    displayAllRecords(students, size);
+
+    // Search for a student by registration number
+    string searchRegNo;
+    cout << "\nEnter registration number to search: ";
+    cin >> searchRegNo;
+    searchByRegNo(students, size, searchRegNo);
+
+    return 0;
+}
