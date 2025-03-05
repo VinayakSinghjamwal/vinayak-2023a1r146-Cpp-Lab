@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class student
+{
+private:
+    string StudentName;
+    int rollnumber;
+
+public:
+    student(string Name, int roll)
+    {
+        StudentName = Name;
+        rollnumber = roll;
+    }
+
+    void displayStudentDetails()
+    {
+        cout << "studentName:" << StudentName << endl;
+        cout << "rollnumber:" << rollnumber << endl;
+    }
+};
+class course
+{
+private:
+    string courseName;
+    int coursecredits;
+    string courseID;
+
+public:
+    course(string courseName1, int coursecredits1, string courseID1)
+    {
+        courseName = courseName1;
+        coursecredits = coursecredits1;
+        courseID = courseID1;
+    }
+    void displayCourseDetails()
+    {
+        cout << "courseName: " << courseName << endl;
+        cout << "courseID: " << courseID << endl;
+        cout << "coursecredits: " << coursecredits << endl;
+    }
+};
+int main()
+{
+    student obj("Abc", 1);
+    obj.displayStudentDetails();
+    course obj2("mathematics", 42, "BSC");
+    obj2.displayCourseDetails();
+}
