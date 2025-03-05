@@ -1,0 +1,24 @@
+/*write a program in CPP with class,name myapp and with a function ,name welcome(),that accepts Student Name,Registration Number, Address from user and this function on execution will display a welcome message with all detailes entered by the user*/
+#include <iostream>
+using namespace std;
+class vinayak7
+{
+private:
+    string name, RegistrationNumber, Address;
+
+public:
+    void fun()
+    {
+        cout << "\n Enter Your Name, Registration Number and Address";
+        cin >> name >> RegistrationNumber >> Address;
+        cout << "welcome to MIET jammu";
+        cout << "\n Your details are as under:";
+        cout << "\n Name=" << name << "\n RegistrationNumber=" << RegistrationNumber << "\n Address=" << Address;
+    }
+};
+int main()
+{
+    vinayak7 fear;
+    fear.fun();
+    return 0;
+}
