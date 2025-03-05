@@ -1,0 +1,40 @@
+/* syntax of array of object
+class name of objectname dimention[]
+example :- Basic Array of Object
+*/
+#include <iostream>
+using namespace std;
+class Books_Management_System
+{
+private:
+    int BookId;
+    string BookName;
+
+public:
+    void Accept()
+    {
+        cout << "\n Enter Book Id";
+        cin >> BookId;
+        cout << "\n Enter Book Name";
+        cin >> BookName;
+    }
+
+public:
+    void Dispaly()
+    {
+        cout << "BookId is" << BookId << "\t BookName is" << BookName << endl;
+    }
+};
+int main()
+{
+    Books_Management_System obj[5];
+    int i;
+    for (i = 0; i < 5; i++)
+    {
+        obj[i].Accept();
+    }
+    for (i = 0; i < 5; i++)
+    {
+        obj[i].Dispaly();
+    }
+}
