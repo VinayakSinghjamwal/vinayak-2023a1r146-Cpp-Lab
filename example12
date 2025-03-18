@@ -1,0 +1,19 @@
+//normal variable vs static variable
+#include<iostream>
+using namespace std;
+class Program{
+    public : void Fun()
+    {
+        static int n =0;  //Normal variable in a function
+        n++;
+        cout<<"Value of n is "<<n<<endl;
+    }
+};
+int main(){
+    Program obj1,obj2,obj3,obj4;
+    obj1.Fun();
+    obj2.Fun();
+    obj3.Fun();
+    obj4.Fun();
+    return 0;
+}
