@@ -1,0 +1,16 @@
+//DIFFERENCE BETWEEEN NORMAL VARIABLE AND STATIC VARIABLE
+#include<iostream>
+using namespace std;
+class A{
+    public :int a=0; // normal member variable 
+     A(){   //class constructor
+        a++;  //incrementing value of a inside constructor
+    }
+};
+int main(){
+    A obj1;    //first object of class
+    cout<<"\n value of a is "<<obj1.a;  //accessing member variable using object of class.
+    A obj2;    //second object of a class
+    cout<<"\n value of a is "<<obj2.a;
+    return 0;
+}
