@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class Program
+{
+    public : Program() //class constructor
+{
+    cout<<"\n Constructor Invoked";
+}
+~Program()     //class destructor
+{
+    cout<<"\n Destructor Invokded";    
+}
+void Display()
+{   //member function of class
+    cout<<"\n Member Function Called";
+}
+};
+void Fun1()   //Function with normal class object
+{
+    Program obj;    //normal object of class
+    obj.Display();   //Member Function Called
+}
+int main()
+{
+    Fun1();   //calling function with class object
+    cout<<"\n Recalling Fun1()";
+    Fun1();
+    return 0;
+}
