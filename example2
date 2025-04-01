@@ -1,0 +1,26 @@
+mutable example:
+int a=0;
+a=1;
+In CPP, we can make our data immutable using constant , IN Cpp we have constant variables, constant function, constant object.
+If we create a variable as constant ,we cannot modify its value after inside function defination.
+If we create object as constant , that object will call constant function only. 
+#include<iostream>
+using namespace std;
+class Program{
+    public : int b;
+    public : Program (const int a)
+    {
+        b = a;
+    }
+    void Modify()
+    {
+        cout<<"\nValue of b is "<<b;
+        b = 16;
+        cout<<"\nValue of b is "<<b;
+    }
+};
+int main(){
+    Program obj(24);
+    obj.Modify();
+    return 0;
+}
